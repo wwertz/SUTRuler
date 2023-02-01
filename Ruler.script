@@ -1,0 +1,19 @@
+//Create a ruler
+//have Paint open 
+set tick = [25, 500]
+
+Repeat 100 times
+	If tick.x modulo 100 = 0
+		Drag tick
+		Drop tick + [0,75]
+	Else if tick.x modulo 50 = 0
+		Drag tick
+		Drop tick + [0,50]
+	Else
+		Drag tick
+		Drop tick + [0,25]
+	End If
+	
+	//increament tick
+	Set tick = tick + [25,0]
+End Repeat
